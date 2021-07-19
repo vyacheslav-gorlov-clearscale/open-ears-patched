@@ -1,0 +1,21 @@
+
+In the method where you want to create your language model (for instance your viewDidLoad method), add the following method call (replacing the placeholders like "WORD" and "A PHRASE" with actual words and phrases you want to be able to recognize):<p>
+<pre>
+OELanguageModelGenerator *lmGenerator = [[OELanguageModelGenerator alloc] init];
+
+NSArray *words = [NSArray arrayWithObjects:@"WORD", @"STATEMENT", @"OTHER WORD", @"A PHRASE", nil];
+NSString *name = @"NameIWantForMyLanguageModelFiles";
+NSError *err = [lmGenerator generateLanguageModelFromArray:words withFilesNamed:name forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]]; // Change "AcousticModelEnglish" to "AcousticModelSpanish" to create a Spanish language model instead of an English one.
+
+NSString *lmPath = nil;
+NSString *dicPath = nil;
+	
+if(err == nil) {
+		
+	lmPath = [lmGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"NameIWantForMyLanguageModelFiles"];
+	dicPath = [lmGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"NameIWantForMyLanguageModelFiles"];
+		
+} else {
+	NSLog(@"Error: %@",[err localizedDescription]);
+}
+</pre>

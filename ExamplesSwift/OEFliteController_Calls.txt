@@ -1,0 +1,4 @@
+After having initialized your OEFliteController, add the following message to your viewDidLoad function:
+<pre>
+self.fliteController.say(_:"A short statement.", with:self.slt)
+</pre>

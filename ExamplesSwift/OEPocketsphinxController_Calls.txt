@@ -1,0 +1,13 @@
+In the method where you want to recognize speech (to test this out, add it to your viewDidLoad method, inside of the success case for your language model generation), add the following method call:
+<pre>
+// OELogging.startOpenEarsLogging() //Uncomment to receive full OpenEars logging in case of any unexpected results.
+do {
+	try OEPocketsphinxController.sharedInstance().setActive(true) // Setting the shared OEPocketsphinxController active is necessary before any of its properties are accessed.
+	} catch {
+		print("Error: it wasn't possible to set the shared instance to active: \"\(error)\"")
+	}
+
+	OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false)
+
+
+</pre>

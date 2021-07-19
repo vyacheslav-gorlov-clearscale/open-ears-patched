@@ -1,0 +1,15 @@
+In the method where you want to create your language model (for instance your viewDidLoad method), add the following method call (replacing the placeholders like "word" and "A PHRASE" with actual words and phrases you want to be able to recognize):<p>
+<pre>
+
+let lmGenerator = OELanguageModelGenerator()
+let words = ["word", "Statement", "other word", "A PHRASE"] // These can be lowercase, uppercase, or mixed-case.
+let name = "NameIWantForMyLanguageModelFiles"
+let err: Error! = lmGenerator.generateLanguageModel(from: words, withFilesNamed: name, forAcousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"))
+
+if(err != nil) {
+	print("Error while creating initial language model: \(err)")   
+} else {
+	let lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModel(withRequestedName: name) // Convenience method to reference the path of a language model known to have been created successfully.
+	let dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionary(withRequestedName: name) // Convenience method to reference the path of a dictionary known to have been created successfully.
+}
+</pre>

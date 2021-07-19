@@ -1,0 +1,27 @@
+OEEventsObserver is the class which keeps you continuously updated about the status of your listening session, among other things, via delegate callbacks.
+
+
+class ViewController: UIViewController, OEEventsObserverDelegate {
+    
+    var slt = Slt()
+    var openEarsEventsObserver = OEEventsObserver()
+    
+    
+Add the OEEventsObserverDelegate protocol to your class declaration at the top of your file, for instance if your class is called ViewController and its class declaration looks like this:<br>
+<pre>
+class ViewController: UIViewController {
+</pre>
+
+change it to look like this:<br>
+
+<pre>
+class ViewController: UIViewController, OEEventsObserverDelegate {
+</pre>
+
+At the beginning of your (for instance, ViewController) class, add the following var:
+
+<pre>
+var openEarsEventsObserver = OEEventsObserver()
+</pre>
+
+</pre>

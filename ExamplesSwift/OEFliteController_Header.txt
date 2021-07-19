@@ -1,0 +1,6 @@
+
+Add to your view controller class:
+<pre>
+var fliteController = OEFliteController()
+var slt = Slt()
+</pre>

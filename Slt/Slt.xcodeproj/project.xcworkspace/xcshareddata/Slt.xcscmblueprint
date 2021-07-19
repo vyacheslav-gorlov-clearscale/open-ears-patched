@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "422901BF37BC7ED4DE8547CAF017E62C05F7028E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0F1706E96210140D14373FD270AAB85BD7E41F09" : 0,
+    "422901BF37BC7ED4DE8547CAF017E62C05F7028E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A45A2797-E6D2-405C-A0E0-B4A63382D986",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0F1706E96210140D14373FD270AAB85BD7E41F09" : "ExtraOpenEarsElements",
+    "422901BF37BC7ED4DE8547CAF017E62C05F7028E" : "OpenEarsDistribution"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Slt",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OpenEars\/Slt\/Slt.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bigears.local:\/Users\/bigears\/Documents\/GitRepos\/ExtraOpenEarsElements.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0F1706E96210140D14373FD270AAB85BD7E41F09"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "192.168.1.95:\/Users\/bigears\/Documents\/GitRepos\/OpenEarsDistribution.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "422901BF37BC7ED4DE8547CAF017E62C05F7028E"
+    }
+  ]
+}
