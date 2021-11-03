@@ -59,51 +59,51 @@ xcodebuild -create-xcframework -output "${ARCHIVES_BASE_DIRECTORY}/OpenEars.xcfr
 -framework "${OPENEARS_IOS_BUILD_DIRECTORY}/OpenEars.framework" \
 -framework "${OPENEARS_SIMULATOR_BUILD_DIRECTORY}/OpenEars.framework"
 
-# Slt
-SLT_CATALYST_BUILD_DIRECTORY="${ARCHIVES_BASE_DIRECTORY}/slt-maccatalyst"
-
-xcodebuild \
-clean \
--sdk "macosx" \
--scheme "Slt" \
--configuration Debug \
-build \
-ENABLE_BITCODE=NO \
-STRIP_SWIFT_SYMBOLS=NO \
-RUN_CLANG_STATIC_ANALYZER=0 \
-SUPPORTS_MACCATALYST=YES \
-CONFIGURATION_BUILD_DIR="${SLT_CATALYST_BUILD_DIRECTORY}"
-
-SLT_IOS_BUILD_DIRECTORY="${ARCHIVES_BASE_DIRECTORY}/slt-iphoneos"
-
-xcodebuild \
-clean \
--sdk "iphoneos" \
--scheme "Slt" \
--configuration Debug \
-build \
-ENABLE_BITCODE=NO \
-STRIP_SWIFT_SYMBOLS=NO \
-RUN_CLANG_STATIC_ANALYZER=0 \
-CONFIGURATION_BUILD_DIR="${SLT_IOS_BUILD_DIRECTORY}"
-
-SLT_SIMULATOR_BUILD_DIRECTORY="${ARCHIVES_BASE_DIRECTORY}/slt-iphonesimulator"
-
-xcodebuild \
-clean \
--sdk "iphonesimulator" \
--scheme "Slt" \
--configuration Debug \
-build \
-ENABLE_BITCODE=NO \
-STRIP_SWIFT_SYMBOLS=NO \
-RUN_CLANG_STATIC_ANALYZER=0 \
-CONFIGURATION_BUILD_DIR="${SLT_SIMULATOR_BUILD_DIRECTORY}"
-
-xcodebuild -create-xcframework -output "${ARCHIVES_BASE_DIRECTORY}/Slt.xcframework" \
--framework "${SLT_CATALYST_BUILD_DIRECTORY}/Slt.framework" \
--framework "${SLT_IOS_BUILD_DIRECTORY}/Slt.framework" \
--framework "${SLT_SIMULATOR_BUILD_DIRECTORY}/Slt.framework"
+## Slt
+#SLT_CATALYST_BUILD_DIRECTORY="${ARCHIVES_BASE_DIRECTORY}/slt-maccatalyst"
+#
+#xcodebuild \
+#clean \
+#-sdk "macosx" \
+#-scheme "Slt" \
+#-configuration Debug \
+#build \
+#ENABLE_BITCODE=NO \
+#STRIP_SWIFT_SYMBOLS=NO \
+#RUN_CLANG_STATIC_ANALYZER=0 \
+#SUPPORTS_MACCATALYST=YES \
+#CONFIGURATION_BUILD_DIR="${SLT_CATALYST_BUILD_DIRECTORY}"
+#
+#SLT_IOS_BUILD_DIRECTORY="${ARCHIVES_BASE_DIRECTORY}/slt-iphoneos"
+#
+#xcodebuild \
+#clean \
+#-sdk "iphoneos" \
+#-scheme "Slt" \
+#-configuration Debug \
+#build \
+#ENABLE_BITCODE=NO \
+#STRIP_SWIFT_SYMBOLS=NO \
+#RUN_CLANG_STATIC_ANALYZER=0 \
+#CONFIGURATION_BUILD_DIR="${SLT_IOS_BUILD_DIRECTORY}"
+#
+#SLT_SIMULATOR_BUILD_DIRECTORY="${ARCHIVES_BASE_DIRECTORY}/slt-iphonesimulator"
+#
+#xcodebuild \
+#clean \
+#-sdk "iphonesimulator" \
+#-scheme "Slt" \
+#-configuration Debug \
+#build \
+#ENABLE_BITCODE=NO \
+#STRIP_SWIFT_SYMBOLS=NO \
+#RUN_CLANG_STATIC_ANALYZER=0 \
+#CONFIGURATION_BUILD_DIR="${SLT_SIMULATOR_BUILD_DIRECTORY}"
+#
+#xcodebuild -create-xcframework -output "${ARCHIVES_BASE_DIRECTORY}/Slt.xcframework" \
+#-framework "${SLT_CATALYST_BUILD_DIRECTORY}/Slt.framework" \
+#-framework "${SLT_IOS_BUILD_DIRECTORY}/Slt.framework" \
+#-framework "${SLT_SIMULATOR_BUILD_DIRECTORY}/Slt.framework"
 
 # Finish
 open "${ARCHIVES_BASE_DIRECTORY}"

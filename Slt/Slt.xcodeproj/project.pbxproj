@@ -41,6 +41,8 @@
 		8CDC420915D17E820074FB89 /* cmu_us_slt_cg_single_mcep_trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmu_us_slt_cg_single_mcep_trees.h; sourceTree = "<group>"; };
 		8CDC420A15D17E820074FB89 /* cmu_us_slt_cg_single_params.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmu_us_slt_cg_single_params.c; sourceTree = "<group>"; };
 		8CDC420B15D17E820074FB89 /* voxdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voxdefs.h; sourceTree = "<group>"; };
+		AD9F4C202732DEE900C56F3D /* OpenEars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = OpenEars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9F4C232732DEFD00C56F3D /* OpenEars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = OpenEars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				8C40977A15D174BE00AED2CF /* Slt */,
 				8C40977915D174BE00AED2CF /* Products */,
 				8CDC420015D17E820074FB89 /* cmu_us_slt */,
+				AD9F4C112732DE2A00C56F3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +110,15 @@
 				8CDC420B15D17E820074FB89 /* voxdefs.h */,
 			);
 			path = cmu_us_slt;
+			sourceTree = "<group>";
+		};
+		AD9F4C112732DE2A00C56F3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F4C232732DEFD00C56F3D /* OpenEars.framework */,
+				AD9F4C202732DEE900C56F3D /* OpenEars.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -309,6 +322,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -323,9 +337,9 @@
 				INFOPLIST_FILE = "Slt/Slt-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clearscale.politepix.Slt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -346,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -353,6 +368,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -367,9 +383,9 @@
 				INFOPLIST_FILE = "Slt/Slt-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clearscale.politepix.Slt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
